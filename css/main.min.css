@@ -1,9 +1,0 @@
-body{font-family:sans;color:#333;background-color:#fff}
-.block-one{border:1px solid #333;padding:5px}
-@media screen and (min-width:1280px){.block-one{width:calc(25% - 20px);margin:10px;display:inline-block}}
-@media screen and (max-width:1280px){.block-one{width:calc(30% - 20px);margin:10px;display:inline-block}}
-@media screen and (max-width:960px){.block-one{width:calc(50% - 20px);margin:10px;display:inline-block}}
-@media screen and (max-width:768px){.block-one{width:calc(45% - 20px);margin:5px;display:inline-block;border:1px dotted #00f}}
-@media screen and (max-width:375px){.block-one{width:calc(100% - 20px);min-width:320px;border:1px solid green;margin:10px auto}}
-@media screen and (max-width:320px){.block-one{width:calc(100% - 30px);min-width:290px;border:1px solid red;margin:10px auto}}
-.counter{padding:0;margin:0;width:100%}

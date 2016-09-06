@@ -1,0 +1,53 @@
+$base-font: sans
+$base-color: #333
+$base-background-color: #fff
+
+$break-small: 320px
+$break-iphone: 375px
+$break-fablet: 768px
+$break-tablet: 960px
+$break-desktop: 1280px
+
+*
+    margin: 0
+    padding: 0
+
+html
+    background-color: #ccc
+
+body
+    font-family: $base-font
+    color: $base-color
+    background-color: $base-background-color
+    margin: 0 auto
+    max-width: 1650px
+    
+wrapper
+    margin: 0 auto
+    @media screen and (min-width: $break-desktop)
+        width: 1280px
+    @media screen and (max-width: $break-desktop)
+        width: 100%
+
+header
+    height: 90px
+    background-color: #15303f
+
+.logo
+    background-color: #ffb400
+    width: calc(28% - 50px)
+    padding-right: 50px
+    height: 90px
+    float: left
+    line-height: 90px
+    vertical-align: middle
+    text-align: right
+    
+    a, img
+        display: inline
+        
+    
+.topnav
+    width: 72%
+    height: 100%
+    float: left
