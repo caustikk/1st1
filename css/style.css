@@ -11,6 +11,9 @@
 @font-face {
   font-family: "LatoBold";
   src: url(../fnt/LatoBold.woff); }
+@font-face {
+  font-family: "LatoItalic";
+  src: url(../fnt/LatoItalic.woff); }
 span, p, li, a {
   font-family: "LatoRegular"; }
 
@@ -110,21 +113,25 @@ header {
       display: inline-block;
       vertical-align: top; }
 
-.intro {
+h1 {
+  font-size: 42px;
+  margin: 0;
+  color: #c0c0c0;
+  text-transform: uppercase;
+  font-weight: normal; }
+
+.underscore {
+  background: url(../img/underscore.png) top center no-repeat;
+  width: 367px;
+  height: 7px;
+  margin-bottom: 57px; }
+
+main section {
   padding: 38px 20px 0 20px;
-  margin-bottom: 120px;
   width: calc(100% - 20px); }
-  .intro h1 {
-    font-size: 42px;
-    margin: 0;
-    color: #c0c0c0;
-    text-transform: uppercase;
-    font-weight: normal; }
-  .intro .underscore {
-    background: url(../img/underscore.png) top center no-repeat;
-    width: 367px;
-    height: 7px;
-    margin-bottom: 57px; }
+
+.intro {
+  margin-bottom: 120px; }
   .intro img {
     float: left;
     margin: 0 130px 5px 50px; }
@@ -174,5 +181,86 @@ header {
   padding-top: 50px; }
   .map h2 {
     margin: 0 0 40px 0; }
+  .map img {
+    margin-bottom: 90px; }
+  .map .explication {
+    display: inline-block;
+    width: 320px;
+    margin: 0 10px;
+    padding: 0 40px;
+    vertical-align: top;
+    text-align: left; }
+    .map .explication li, .map .explication li span {
+      line-height: 22px;
+      vertical-align: top; }
+    .map .explication li {
+      list-style: none;
+      margin-bottom: 15px; }
+    .map .explication h3 {
+      font-family: "LatoBold";
+      margin-bottom: 30px;
+      font-size: 27px;
+      text-transform: uppercase; }
+
+.usa, .ca, .me, .gb, .fr, .ge, .sp, .it, .in, .cn, .jp {
+  height: 22px;
+  width: 34px;
+  margin-right: 15px;
+  background: url(../img/sprite.png);
+  display: inline-block; }
+
+.usa {
+  background-position: -341px 0; }
+
+.ca {
+  background-position: 1px -28px; }
+
+.me {
+  background-position: -36px -28px; }
+
+.gb {
+  background-position: -165px 0; }
+
+.fr {
+  background-position: -200px 0; }
+
+.ge {
+  background-position: -235px 0; }
+
+.sp {
+  background-position: -271px 0; }
+
+.it {
+  background-position: -307px 0; }
+
+.in {
+  background-position: -59px 0; }
+
+.cn {
+  background-position: -95px 0; }
+
+.jp {
+  background-position: -130px 0; }
+
+.hrmanager, .quote {
+  display: inline-block;
+  height: 240px; }
+
+.quote {
+  position: relative;
+  width: 900px; }
+
+.hrmanager {
+  text-align: center;
+  width: 140px;
+  margin: 0 80px;
+  vertical-align: top; }
+
+.quote {
+  background: url(../img/quote.png) top center no-repeat;
+  width: 648px;
+  height: 156px;
+  padding: 40px 50px 50px 200px;
+  font-family: "LatoItalic"; }
 
 /*# sourceMappingURL=style.css.map */
