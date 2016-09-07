@@ -14,8 +14,8 @@ $(document).ready(function() {
     $(document).scroll(function(){
         currentScrollTop = $(document).scrollTop();
         if (tempScrollTop < currentScrollTop){
-            $('header').removeClass('sticktop').animate({height: "hide"}, 600);
-        }else if(currentScrollTop < 90){
+            $('header').removeClass('sticktop');
+        }else if(0 <= currentScrollTop && currentScrollTop <= 100){
             $('header').removeClass('sticktop');
         }else{
             $('header').addClass('sticktop').animate({height: "show"}, 400);}
