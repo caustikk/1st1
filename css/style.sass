@@ -58,8 +58,7 @@ body
 .sticktop
     position: fixed
     top: 0
-    left: 50%
-    margin-left: -50%
+    left: 0
     width: 100%
     z-index: 1000
 
@@ -67,29 +66,46 @@ header
     height: 90px
     background: url(../img/header-bg.jpg) repeat-y top center
     text-align: left
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        height: 80px
+        background-position: -210px 0
+    @media screen and (min-width: $break-fablet) and (max-width: $break-tablet)
 
 .logo, .topnav
     display: inline-block
     vertical-align: middle
     height: 90px
     line-height: 90px
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        height: 80px
+        line-height: 80px
     
 .logo
     width: 235px
     padding-right: 50px
     text-align: right
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        
     
     a, img
         display: inline
+    img
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 190px
+            
         
     
 .topnav
     width: 990px
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: 670px
     
     ul
         display: inline-block
         margin-left: 85px
         float: left
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            margin-left: 50px
         
         li
             display: inline-block
@@ -100,13 +116,18 @@ header
             padding: 0 20px
             margin-right: 40px
             color: $base-background-color
-            border: 1px solid #fff
+            border: 1px solid $base-background-color
             border-radius: 5px
             text-transform: uppercase
             font-size: 14px
+            @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+                border: none
+                font-size: 16px
             
         li:last-of-type
             margin-right: 169px
+            @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+                margin-right: 0
         
         li:hover
             background-color: #2c4b5d
@@ -121,6 +142,8 @@ header
         height: 90px
         line-height: 90px
         vertical-align: middle
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            display: none
         
         .contact
             display: block
@@ -173,16 +196,25 @@ main section
     
 .intro
     margin-bottom: 120px
+    width: calc(100% - 40px)
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        margin-bottom: 0
         
     img
         float: left
         margin: 0 130px 5px 50px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 320px
+            height: auto
+            margin-right: 40px
         
     h2
         margin: 0 0 20px 0
         
     p 
         margin: 21px 0
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            font-size: 16px
 
 .numbers
     background-color: #ecf8ff
@@ -195,6 +227,8 @@ main section
         color: #8d9ba3
         font-size: 32px
         margin-bottom: 38px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            font-size: 26px
         
 .number
     display: inline-block
@@ -203,6 +237,8 @@ main section
     line-height: 95px
     vertical-align: middle
     border-right: 1px solid #b8d1e0
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: 220px
     
     span
         display: block
@@ -214,11 +250,15 @@ main section
         font-weight: bold
         font-size: 34px
         margin-top: 10px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            font-size: 28px
     
     span:last-of-type
         color: #666666
         font-size: 18px
         text-transform: uppercase
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            font-size: 16px
     
 .number:last-of-type
     border-right: none
@@ -235,6 +275,9 @@ main section
         
     img
         margin-bottom: 90px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 100%
+            height: auto
         
     .explication
         display: inline-block
@@ -243,6 +286,9 @@ main section
         padding: 0 40px
         vertical-align: top
         text-align: left
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 250px
+            padding: 0 0 0 30px
         
         li, li span
 
@@ -258,6 +304,8 @@ main section
             margin-bottom: 30px
             font-size: 27px
             text-transform: uppercase
+            @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+                font-size: 22px
             
 .usa, .ca, .me, .gb, .fr, .ge, .sp, .it, .in, .cn, .jp
     height: 22px
@@ -299,6 +347,9 @@ main section
 .jp
     background-position: -130px 0
 
+.vacancies
+    width: calc(100% - 40px)
+    
 .vacancy-intro
     margin-bottom: 40px
     
@@ -306,21 +357,26 @@ main section
     display: inline-block
     height: 240px
 
-.quote 
-    position: relative
-    width: 900px
-
 .hrmanager
     text-align: center
     width: 140px
     margin: 0 80px
     vertical-align: top
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        margin: 0 20px
+    
 
 .quote
+    position: relative
     background: url(../img/quote.png) top center no-repeat
+    background-size: contain
     width: 698px
     height: 156px
     padding: 40px 50px 50px 150px
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: 650px
+        height: 200px
+        padding: 10px 20px 20px 50px
     
     p
         font-family: 'LatoItalic'
@@ -365,6 +421,10 @@ main section
 .accordeon
     width: calc(100% - 40px)
     padding: 0 20px
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: calc(100% + 40px)
+        margin-left: -20px
+        padding: 0
     
 .accordeon > li
     display: block
@@ -382,7 +442,7 @@ main section
         cursor: pointer
         font-weight: normal
         font-family: 'LatoRegular'
-        background-color: #fff
+        background-color: $base-background-color
         color: #055a93
         -webkit-box-shadow: 2px 2px 2px 0px rgba(209,209,209,1)
         -moz-box-shadow: 2px 2px 2px 0px rgba(209,209,209,1)
@@ -393,11 +453,11 @@ main section
         
     h2.active
         background-color: #055a93
-        color: #fff
+        color: $base-background-color
         
     .vacancycontent
         display: none
-        width: calc(100% - 40px)
+        width: calc(100% - 80px)
         padding: 20px 40px
         
         .active
@@ -409,6 +469,10 @@ main section
         
     .vacancycontent p
         font-weight: bold
+        
+.ourteam
+    width: calc(100% - 40px)
+    padding: 0 20px
         
 .ourteam, .teamwrapper
     margin-top: 50px
@@ -423,14 +487,25 @@ main section
     display: inline-block
     margin: 10px 20px
     vertical-align: top
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: 160px
+        height: 240px
+        
+        img 
+            width: 140px
+            height: auto
     
     p:first-of-type
         margin: 12px auto 10px
         font-size: 16px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            font-size: 15px
     
     p:last-of-type
         font-size: 14px
         color: #666
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            font-size: 13px
 
 .member:first-of-type
     display: block
@@ -442,11 +517,18 @@ main section
     background: url(../img/people.jpg) top center no-repeat
     width: 100%
     height: 617px
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        background-size: contain
+        height: 352px
     
 footer
     height: 290px
     background: url(../img/footer-bg.jpg) top center repeat-y
     text-align: center
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        height: 380px
+        background-position: -220px 0
+        position: relative
 
 .footfourth
     display: inline-block
@@ -454,7 +536,9 @@ footer
     margin: 30px 5px 10px 5px
     text-align: left
     vertical-align: top
-    color: #fff
+    color: $base-background-color
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: 250px
     
     h3
         font-family: 'LatoBold'
@@ -466,6 +550,8 @@ footer
         
     .contactlist li
         margin-bottom: 20px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            margin-bottom: 10px
         
     a
         color: #6597b0
@@ -473,13 +559,18 @@ footer
         text-decoration: none
     
 .footfourth:first-of-type
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        float: left
     
     img
         display: block
         margin-bottom: 30px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 158px
+        
     
     p:first-of-type, p:last-of-type
-        color: #fff
+        color: $base-background-color
         font-size: 14px
         margin-bottom: 12px
     
@@ -498,23 +589,33 @@ footer
         margin-bottom: 13px
         color: #6597b0
         cursor: pointer
+
+.feedback
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: 350px
+        margin-left: 40px
+        padding-left: 20px
+        float: left
         
 .resume
     position: relative
     
     input[type=text], input[type=email]
-        width: 260px
+        width: 270px
         padding-left: 10px
         height: 30px
         border: none
         outline: none
         margin-bottom: 10px
         color: #777
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 320px
+            height: 40px
         
     input[type=submit]
         background-color: #ffb400
         color: #000
-        width: 270px
+        width: 280px
         height: 40px
         line-height: 40px
         vertical-align: middle
@@ -524,6 +625,9 @@ footer
         outline: none
         border-radius: 5px
         margin-top: 20px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 330px
+            height: 50px
         
     input[type=file]
         width: 80px
@@ -533,9 +637,18 @@ footer
         position: absolute
         left: 190px
         top: 80px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 124px
+            height: 40px
+            left: 200px
+            top: 110px
         
     label
         font-size: 14px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            display: inline-block
+            font-size: 18px
+            width: 200px
         
     span
         display: inline-block
@@ -549,18 +662,35 @@ footer
         border-radius: 5px
         color: #6795ad
         font-size: 14px
-        
-        :hover
-            color: #15313f
-            background-color: #6795ad
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+            width: 124px
+            height: 40px
+            font-size: 18px
+            line-height: 42px
+            vertical-align: middle
+            text-transform: uppercase
+            margin: -20px 0 0 0
         
 .contactsbottom, .navigate
     width: 240px
     padding-left: 60px
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        width: 250px
+        padding-left: 0
+        
+.navigate
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        position: absolute
+        top: 150px
+        right: 0
     
 .contactsbottom
     a
         vertical-align: top
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        position: absolute
+        top: 0
+        right: 0
         
 .scrollup, .scrolldown
     width: 71px
@@ -569,6 +699,8 @@ footer
     right: 0
     bottom: 200px
     cursor: pointer
+    @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
+        display: none
 
 .scrolldown
     bottom: 127px
