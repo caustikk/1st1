@@ -172,6 +172,7 @@ main section
     background-color: #ecf8ff
     min-height: 190px
     text-align: center
+    width: calc(100% - 40px)
     padding: 60px 20px 40px
     
     h2
@@ -210,6 +211,7 @@ main section
     background: linear-gradient(to top, #e0f4ff, #c4eaff)
     border-top: 5px solid #b9def4
     text-align: center
+    width: calc(100% - 40px)
     padding-top: 50px
     
     h2
@@ -280,7 +282,10 @@ main section
     
 .jp
     background-position: -130px 0
- 
+
+.vacancy-intro
+    margin-bottom: 40px
+    
 .hrmanager,  .quote
     display: inline-block
     height: 240px
@@ -297,7 +302,82 @@ main section
 
 .quote
     background: url(../img/quote.png) top center no-repeat
-    width: 648px
+    width: 698px
     height: 156px
-    padding: 40px 50px 50px 200px
-    font-family: 'LatoItalic'
+    padding: 40px 50px 50px 150px
+    
+    p
+        font-family: 'LatoItalic'
+        font-size: 18px
+        margin-bottom: 30px
+
+.hrmail, .hrphone
+    display: inline-block
+    height: 20px
+    
+.hrmail a, .hrphone a
+    text-decoration: none
+    border-bottom: none
+    height: 20px
+    line-height: 20px
+    vertical-align: top
+    font-size: 18px
+    
+.hrmail a
+    color: #055a93
+    margin-right: 100px
+    
+.hrphone a
+    color: $base-color
+        
+.hrmail .envelope, .hrphone .iphone
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin-right: 10px
+    background: url(../img/sprite.png) -37px 2px
+    -webkit-filter: grayscale(100%)
+    -moz-filter: grayscale(100%)
+    -ms-filter: grayscale(100%)
+    -o-filter: grayscale(100%)
+    filter: grayscale(100%)
+    filter: gray
+    
+.hrphone .iphone
+    background: url(../img/sprite.png) -15px 0px
+    
+.accordeon
+    width: calc(100% - 40px)
+    padding: 0 20px
+    
+.accordeon > li
+    display: block
+    clear: both
+    
+    h2
+        display: block
+        width: calc(100% - 20px)
+        padding-left: 20px
+        height: 50px
+        line-height: 50px
+        vertical-align: middle
+        text-transform: uppercase
+        cursor: pointer
+        font-weight: normal
+        font-family: 'LatoRegular'
+        background-color: #fff
+        color: #055a93
+        
+    h2.active
+        background-color: #055a93
+        color: #fff
+        
+    .vacancycontent
+        display: none
+        width: calc(100% - 40px)
+        padding: 20px 40px
+        
+        .active
+            display: block
+        
+    
