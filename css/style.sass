@@ -53,6 +53,12 @@ body
         width: 100%
     @media screen and (min-width: $break-desktop)
         width: 1280px
+        
+.sticktop
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 1000
 
 header
     height: 90px
@@ -114,27 +120,27 @@ header
             margin-top: 7px
             font-size: 12px
         
-        i
-            width: 20px
-            height: 20px
-            display: inline-block
-            margin-right: 10px
-            
-        i.iphone
-            background: url(../img/sprite.png) -17px 0
-            
-        i.envelope
-            background: url(../img/sprite.png) -37px 2px
-            
-        i.vk
-            background: url(../img/sprite.png) 1px 5px
-        
         a
             text-decoration: none
             border-bottom: none
             color: $base-background-color
             display: inline-block
             vertical-align: top
+            
+i.iphone, i.envelope, i.vk
+    width: 20px
+    height: 20px
+    display: inline-block
+    margin-right: 10px
+
+i.iphone
+    background: url(../img/sprite.png) -17px 0
+            
+i.envelope
+    background: url(../img/sprite.png) -37px 2px
+            
+i.vk
+    background: url(../img/sprite.png) 1px 5px
 
 main
     
@@ -436,7 +442,7 @@ footer
     ul
         list-style: none
         
-    .contacts li
+    .contactlist li
         margin-bottom: 20px
         
     a
@@ -452,14 +458,14 @@ footer
     
     p:first-of-type, p:last-of-type
         color: #fff
-        font-size: 16px
+        font-size: 14px
         margin-bottom: 12px
     
     p:nth-child(3), p:last-of-type
         color: #6490a9
     
     p:nth-child(3)
-        font-size: 13px
+        font-size: 12px
         margin-bottom: 5px
     
     p:last-of-type
@@ -469,6 +475,7 @@ footer
     li
         margin-bottom: 13px
         color: #6597b0
+        cursor: pointer
         
 .resume
     position: relative
@@ -524,3 +531,11 @@ footer
         :hover
             color: #15313f
             background-color: #6795ad
+        
+.contactsbottom, .navigate
+    width: 240px
+    padding-left: 60px
+    
+.contactsbottom
+    a
+        vertical-align: top
