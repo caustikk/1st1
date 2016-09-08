@@ -58,6 +58,14 @@ header {
     header {
       height: 80px;
       background-position: -210px 0; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    header {
+      background-position: -240px 0; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    header {
+      height: 100px;
+      background: url(../img/header-bg-vert.jpg) repeat-x top center;
+      background-position: 0 -435px; } }
 
 .logo, .topnav {
   display: inline-block;
@@ -68,22 +76,53 @@ header {
     .logo, .topnav {
       height: 80px;
       line-height: 80px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .logo, .topnav {
+      height: 50px;
+      line-height: 50px; } }
 
 .logo {
   width: 235px;
   padding-right: 50px;
   text-align: right; }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .logo {
+      padding-right: 0;
+      text-align: center; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .logo {
+      width: 100%;
+      clear: both;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center; } }
   .logo a, .logo img {
     display: inline; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .logo img {
       width: 190px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .logo img {
+      width: 180px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .logo img {
+      height: 35px;
+      width: auto; } }
 
 .topnav {
   width: 990px; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .topnav {
       width: 670px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .topnav {
+      width: 500px;
+      margin-left: 20px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .topnav {
+      display: block;
+      width: 100%;
+      text-align: center; } }
   .topnav ul {
     display: inline-block;
     margin-left: 85px;
@@ -91,6 +130,13 @@ header {
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .topnav ul {
         margin-left: 50px; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .topnav ul {
+        margin-left: 10px; } }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .topnav ul {
+        margin: 0;
+        float: none; } }
     .topnav ul li {
       display: inline-block;
       cursor: pointer;
@@ -104,13 +150,23 @@ header {
       border-radius: 5px;
       text-transform: uppercase;
       font-size: 14px; }
-      @media screen and (min-width: 960px) and (max-width: 1280px) {
+      @media screen and (min-width: 320px) and (max-width: 1280px) {
         .topnav ul li {
           border: none;
           font-size: 16px; } }
+      @media screen and (min-width: 375px) and (max-width: 960px) {
+        .topnav ul li {
+          margin-right: 10px;
+          font-size: 18px;
+          padding: 0 10px; } }
+      @media screen and (min-width: 320px) and (max-width: 375px) {
+        .topnav ul li {
+          padding: 0 2px;
+          font-size: 12px;
+          margin: 0 5px; } }
     .topnav ul li:last-of-type {
       margin-right: 169px; }
-      @media screen and (min-width: 960px) and (max-width: 1280px) {
+      @media screen and (min-width: 320px) and (max-width: 1280px) {
         .topnav ul li:last-of-type {
           margin-right: 0; } }
     .topnav ul li:hover {
@@ -124,7 +180,7 @@ header {
     height: 90px;
     line-height: 90px;
     vertical-align: middle; }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 320px) and (max-width: 1280px) {
       .topnav .contacts {
         display: none; } }
     .topnav .contacts .contact {
@@ -162,12 +218,21 @@ h1 {
   color: #c0c0c0;
   text-transform: uppercase;
   font-weight: normal; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    h1 {
+      font-size: 32px; } }
 
 .underscore {
   background: url(../img/underscore.png) top center no-repeat;
   width: 367px;
   height: 7px;
   margin-bottom: 57px; }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .underscore {
+      width: 300px; } }
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    .underscore {
+      width: 290px; } }
 
 main section {
   padding: 38px 20px 0 20px;
@@ -176,7 +241,7 @@ main section {
 .intro {
   margin-bottom: 120px;
   width: calc(100% - 40px); }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
     .intro {
       margin-bottom: 0; } }
   .intro img {
@@ -187,6 +252,17 @@ main section {
         width: 320px;
         height: auto;
         margin-right: 40px; } }
+    @media screen and (min-width: 320px) and (max-width: 960px) {
+      .intro img {
+        width: 480px;
+        height: auto;
+        display: block;
+        clear: both;
+        margin: 0 auto; } }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .intro img {
+        width: 280px;
+        float: none; } }
   .intro h2 {
     margin: 0 0 20px 0; }
   .intro p {
@@ -194,6 +270,9 @@ main section {
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .intro p {
         font-size: 16px; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .intro p {
+        font-size: 18px; } }
 
 .numbers {
   background-color: #ecf8ff;
@@ -208,6 +287,12 @@ main section {
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .numbers h2 {
         font-size: 26px; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .numbers h2 {
+        font-size: 24px; } }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .numbers h2 {
+        font-size: 18px; } }
 
 .number {
   display: inline-block;
@@ -219,6 +304,13 @@ main section {
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .number {
       width: 220px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .number {
+      width: 170px; } }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .number {
+      border-right: none;
+      border-bottom: 1px solid #b8d1e0; } }
   .number span {
     display: block;
     height: 40px;
@@ -241,6 +333,9 @@ main section {
 
 .number:last-of-type {
   border-right: none; }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .number:last-of-type {
+      border-bottom: none; } }
 
 .map {
   background: linear-gradient(to top, #e0f4ff, #c4eaff);
@@ -252,7 +347,7 @@ main section {
     margin: 0 0 40px 0; }
   .map img {
     margin-bottom: 90px; }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 320px) and (max-width: 1280px) {
       .map img {
         width: 100%;
         height: auto; } }
@@ -267,6 +362,19 @@ main section {
       .map .explication {
         width: 250px;
         padding: 0 0 0 30px; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .map .explication {
+        width: 210px;
+        padding: 0 0 0 20px;
+        margin: 0; } }
+    @media screen and (min-width: 375px) and (max-width: 768px) {
+      .map .explication {
+        padding: 0; } }
+    @media screen and (min-width: 320px) and (max-width: 375px) {
+      .map .explication {
+        padding: 0;
+        margin: 0;
+        width: 280px; } }
     .map .explication li, .map .explication li span {
       line-height: 22px;
       vertical-align: top; }
@@ -281,6 +389,9 @@ main section {
       @media screen and (min-width: 960px) and (max-width: 1280px) {
         .map .explication h3 {
           font-size: 22px; } }
+      @media screen and (min-width: 768px) and (max-width: 960px) {
+        .map .explication h3 {
+          font-size: 20px; } }
 
 .usa, .ca, .me, .gb, .fr, .ge, .sp, .it, .in, .cn, .jp {
   height: 22px;
@@ -324,6 +435,11 @@ main section {
 
 .vacancies {
   width: calc(100% - 40px); }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .vacancies {
+      padding: 0 10px;
+      width: calc(100% - 20px);
+      position: relative; } }
 
 .vacancy-intro {
   margin-bottom: 40px; }
@@ -340,6 +456,21 @@ main section {
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .hrmanager {
       margin: 0 20px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .hrmanager {
+      margin: 0; } }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .hrmanager {
+      position: absolute;
+      top: 490px;
+      left: 50%;
+      margin: 0 0 0 -80px; } }
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    .hrmanager {
+      position: absolute;
+      top: 400px;
+      left: 50%;
+      margin: 0 0 0 -80px; } }
 
 .quote {
   position: relative;
@@ -353,22 +484,55 @@ main section {
       width: 650px;
       height: 200px;
       padding: 10px 20px 20px 50px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .quote {
+      width: 510px;
+      height: 290px;
+      padding: 10px 20px 20px 50px;
+      background-size: 550px 320px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .quote {
+      background: url(../img/quote-vert.jpg) top center no-repeat;
+      background-size: contain;
+      width: calc(100% - 60px);
+      height: 320px;
+      padding: 20px 30px;
+      float: left;
+      position: absolute;
+      top: 70px;
+      left: 0; } }
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    .quote {
+      padding: 20px;
+      width: calc(100% - 40px); } }
   .quote p {
     font-family: "LatoItalic";
     font-size: 18px;
     margin-bottom: 30px; }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .quote p {
+        font-size: 20px;
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 320px) and (max-width: 375px) {
+      .quote p {
+        font-size: 16px;
+        margin-bottom: 18px; } }
 
 .hrmail, .hrphone {
   display: inline-block;
   height: 20px; }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .hrmail, .hrphone {
+      display: block;
+      margin: 20px 0 0 0; } }
 
 .hrmail a, .hrphone a {
   text-decoration: none;
   border-bottom: none;
   height: 20px;
-  line-height: 20px;
+  line-height: 22px;
   vertical-align: top;
-  font-size: 18px; }
+  font-size: 16px; }
 
 .hrmail a {
   color: #055a93;
@@ -396,16 +560,30 @@ main section {
 .accordeon {
   width: calc(100% - 40px);
   padding: 0 20px; }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
     .accordeon {
       width: calc(100% + 40px);
       margin-left: -20px;
+      padding: 0; } }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .accordeon {
+      width: 100%;
+      margin: 600px 0 0 0;
+      padding: 0; } }
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    .accordeon {
+      width: 100%;
+      margin: 530px 0 0 0;
       padding: 0; } }
 
 .accordeon > li {
   display: block;
   clear: both;
   margin: 5px 0; }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .accordeon > li {
+      width: calc(100% + 20px);
+      margin-left: -10px; } }
   .accordeon > li h2 {
     display: block;
     width: calc(100% - 20px);
@@ -439,12 +617,12 @@ main section {
   .accordeon > li .vacancycontent p {
     font-weight: bold; }
 
+.ourteam, .teamwrapper {
+  margin-top: 50px; }
+
 .ourteam {
   width: calc(100% - 40px);
   padding: 0 20px; }
-
-.ourteam, .teamwrapper {
-  margin-top: 50px; }
 
 .teamwrapper {
   text-align: center; }
@@ -463,10 +641,34 @@ main section {
       .member img {
         width: 140px;
         height: auto; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .member {
+      width: 142px;
+      height: 240px;
+      margin: 10px; }
+      .member img {
+        width: 140px;
+        height: auto; } }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .member {
+      width: 150px;
+      height: 240px;
+      margin: 5px; }
+      .member img {
+        width: 120px;
+        height: auto; } }
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    .member {
+      width: 120px;
+      height: 240px;
+      margin: 5px; }
+      .member img {
+        width: 100px;
+        height: auto; } }
   .member p:first-of-type {
     margin: 12px auto 10px;
     font-size: 16px; }
-    @media screen and (min-width: 960px) and (max-width: 1280px) {
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
       .member p:first-of-type {
         font-size: 15px; } }
   .member p:last-of-type {
@@ -490,6 +692,10 @@ main section {
     .people {
       background-size: contain;
       height: 352px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .people {
+      background-size: auto 430px;
+      height: 430px; } }
 
 footer {
   height: 290px;
@@ -500,6 +706,24 @@ footer {
       height: 380px;
       background-position: -220px 0;
       position: relative; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    footer {
+      height: 500px;
+      position: relative;
+      background: url(../img/footer-bg-vert.jpg) top center repeat-x;
+      background-position: 0 -350px; } }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    footer {
+      height: 780px;
+      position: relative;
+      background: url(../img/footer-bg-vert.jpg) top center repeat-x;
+      background-position: 0 -360px; } }
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    footer {
+      height: 740px;
+      position: relative;
+      background: url(../img/footer-bg-vert.jpg) top center repeat-x;
+      background-position: 0 -360px; } }
 
 .footfourth {
   display: inline-block;
@@ -511,10 +735,19 @@ footer {
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .footfourth {
       width: 250px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .footfourth {
+      display: block;
+      width: calc(100% - 20px);
+      margin: 0;
+      padding: 20px 10px; } }
   .footfourth h3 {
     font-family: "LatoBold";
     margin-bottom: 20px;
     font-size: 16px; }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .footfourth h3 {
+        font-size: 18px; } }
   .footfourth ul {
     list-style: none; }
   .footfourth .contactlist li {
@@ -522,6 +755,9 @@ footer {
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .footfourth .contactlist li {
         margin-bottom: 10px; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .footfourth .contactlist li {
+        margin-bottom: 5px; } }
   .footfourth a {
     color: #6597b0;
     border-bottom: none;
@@ -530,21 +766,40 @@ footer {
 @media screen and (min-width: 960px) and (max-width: 1280px) {
   .footfourth:first-of-type {
     float: left; } }
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .footfourth:first-of-type {
+    width: 100%;
+    clear: both; } }
 .footfourth:first-of-type img {
   display: block;
   margin-bottom: 30px; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .footfourth:first-of-type img {
       width: 158px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .footfourth:first-of-type img {
+      float: left;
+      width: 160px;
+      height: auto;
+      margin: 0 80px 40px 30px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .footfourth:first-of-type img {
+      display: none; } }
 .footfourth:first-of-type p:first-of-type, .footfourth:first-of-type p:last-of-type {
   color: #fff;
   font-size: 14px;
   margin-bottom: 12px; }
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .footfourth:first-of-type {
+    margin-bottom: 5px; } }
 .footfourth:first-of-type p:nth-child(3), .footfourth:first-of-type p:last-of-type {
   color: #6490a9; }
 .footfourth:first-of-type p:nth-child(3) {
   font-size: 12px;
   margin-bottom: 5px; }
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .footfourth:first-of-type {
+    white-space: nowrap; } }
 .footfourth:first-of-type p:last-of-type {
   margin-bottom: 0; }
 
@@ -552,6 +807,13 @@ footer {
   margin-bottom: 13px;
   color: #6597b0;
   cursor: pointer; }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .footfourth:last-of-type li {
+      margin-bottom: 5px; } }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .footfourth:last-of-type li {
+      margin-left: 10px;
+      margin-bottom: 15px; } }
 
 @media screen and (min-width: 960px) and (max-width: 1280px) {
   .feedback {
@@ -559,6 +821,14 @@ footer {
     margin-left: 40px;
     padding-left: 20px;
     float: left; } }
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .feedback {
+    float: left;
+    margin-left: 40px; } }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .feedback {
+    width: calc(100% - 20px);
+    padding: 10px; } }
 
 .resume {
   position: relative; }
@@ -573,6 +843,10 @@ footer {
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .resume input[type=text], .resume input[type=email] {
         width: 320px;
+        height: 40px; } }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .resume input[type=text], .resume input[type=email] {
+        width: calc(100% - 10px);
         height: 40px; } }
   .resume input[type=submit] {
     background-color: #ffb400;
@@ -591,6 +865,12 @@ footer {
       .resume input[type=submit] {
         width: 330px;
         height: 50px; } }
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      .resume input[type=submit] {
+        width: 100%;
+        font-size: 24px;
+        height: 50px;
+        line-height: 50px; } }
   .resume input[type=file] {
     width: 80px;
     height: 20px;
@@ -612,6 +892,9 @@ footer {
         display: inline-block;
         font-size: 18px;
         width: 200px; } }
+    @media screen and (min-width: 375px) and (max-width: 768px) {
+      .resume label {
+        margin-left: 40px; } }
   .resume span {
     display: inline-block;
     width: 80px;
@@ -637,16 +920,37 @@ footer {
 .contactsbottom, .navigate {
   width: 240px;
   padding-left: 60px; }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
     .contactsbottom, .navigate {
       width: 250px;
       padding-left: 0; } }
+  @media screen and (min-width: 375px) and (max-width: 768px) {
+    .contactsbottom, .navigate {
+      width: calc(100% - 20px);
+      padding: 10px; }
+      .contactsbottom li, .navigate li {
+        margin: 15px 0;
+        font-size: 18px; }
+      .contactsbottom li:last-of-type, .navigate li:last-of-type {
+        margin-bottom: 5px; } }
 
 @media screen and (min-width: 960px) and (max-width: 1280px) {
   .navigate {
     position: absolute;
     top: 150px;
     right: 0; } }
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .navigate {
+    position: absolute;
+    top: 280px;
+    right: 20px; } }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .navigate {
+    border-top: 1px solid #eff0f2;
+    width: calc(100% - 20px);
+    padding: 10px; }
+    .navigate h3 {
+      display: none; } }
 
 .contactsbottom a {
   vertical-align: top; }
@@ -655,6 +959,19 @@ footer {
     position: absolute;
     top: 0;
     right: 0; } }
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .contactsbottom {
+    position: absolute;
+    top: 140px;
+    right: 20px; } }
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .contactsbottom {
+    width: calc(100% - 40px);
+    padding: 20px; } }
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .contactsbottom {
+    width: calc(100% - 20px);
+    padding: 10px; } }
 
 .scrollup, .scrolldown {
   width: 71px;
@@ -663,7 +980,7 @@ footer {
   right: 0;
   bottom: 200px;
   cursor: pointer; }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
     .scrollup, .scrolldown {
       display: none; } }
 
