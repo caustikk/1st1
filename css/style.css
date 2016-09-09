@@ -23,19 +23,19 @@ h1 {
 h2 {
   font-family: "LatoBold"; }
 
-html {
-  background-color: #ccc; }
-
 body {
   font-family: sans;
   color: #333;
   background-color: #fff;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  max-width: 1650px;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 .wrapper {
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
   @media screen and (max-width: 1280px) {
     .wrapper {
       width: 100%; } }
@@ -43,24 +43,45 @@ body {
     .wrapper {
       width: 1280px; } }
 
-.sticktop {
+.full-header-width-left, .full-header-width-right {
+  position: absolute;
+  top: 0;
+  width: 2000px;
+  height: 90px;
+  z-index: -1; }
+
+.fixed {
+  position: fixed;
+  z-index: 1; }
+
+.full-header-width-left {
+  background: url(../img/header-yellow.jpg) no-repeat center top;
+  left: 0; }
+
+.full-header-width-right {
+  background: url(../img/header-blue.jpg) no-repeat center top;
+  left: 50%; }
+
+.listdown {
+  top: -90px; }
+
+.listup {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 1000; }
 
 header {
+  position: absolute;
+  min-width: 1280px;
+  max-width: 1650px;
+  width: auto;
   height: 90px;
-  background: url(../img/header-bg.jpg) repeat-y top center;
-  text-align: left; }
+  margin: 0 auto;
+  z-index: 10;
+  background: url(../img/header-full.jpg) no-repeat center top; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     header {
-      height: 80px;
-      background-position: -210px 0; } }
-  @media screen and (min-width: 768px) and (max-width: 960px) {
-    header {
-      background-position: -240px 0; } }
+      height: 80px; } }
   @media screen and (min-width: 320px) and (max-width: 768px) {
     header {
       height: 100px;
@@ -125,7 +146,7 @@ header {
       text-align: center; } }
   .topnav ul {
     display: inline-block;
-    margin-left: 85px;
+    margin-left: 81px;
     float: left; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .topnav ul {
@@ -140,16 +161,16 @@ header {
     .topnav ul li {
       display: inline-block;
       cursor: pointer;
-      height: 40px;
-      line-height: 42px;
+      height: 38px;
+      line-height: 40px;
       vertical-align: middle;
-      padding: 0 20px;
+      padding: 0 17px;
       margin-right: 40px;
       color: #fff;
       border: 1px solid #fff;
       border-radius: 5px;
       text-transform: uppercase;
-      font-size: 14px; }
+      font-size: 16px; }
       @media screen and (min-width: 320px) and (max-width: 1280px) {
         .topnav ul li {
           border: none;
@@ -188,8 +209,8 @@ header {
       height: 20px;
       line-height: 20px;
       vertical-align: top;
-      margin-top: 7px;
-      font-size: 12px; }
+      margin-top: 8px;
+      font-size: 14px; }
     .topnav .contacts a {
       text-decoration: none;
       border-bottom: none;
@@ -212,8 +233,11 @@ i.envelope {
 i.vk {
   background: url(../img/sprite.png) 1px 5px; }
 
+main {
+  padding-top: 100px; }
+
 h1 {
-  font-size: 42px;
+  font-size: 40px;
   margin: 0;
   color: #c0c0c0;
   text-transform: uppercase;
@@ -226,7 +250,7 @@ h1 {
   background: url(../img/underscore.png) top center no-repeat;
   width: 367px;
   height: 7px;
-  margin-bottom: 57px; }
+  margin-bottom: 50px; }
   @media screen and (min-width: 375px) and (max-width: 768px) {
     .underscore {
       width: 300px; } }
@@ -246,7 +270,7 @@ main section {
       margin-bottom: 0; } }
   .intro img {
     float: left;
-    margin: 0 130px 5px 50px; }
+    margin: 7px 136px 5px 50px; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .intro img {
         width: 320px;
@@ -264,9 +288,10 @@ main section {
         width: 280px;
         float: none; } }
   .intro h2 {
-    margin: 0 0 20px 0; }
+    margin: 0 0 10px 0;
+    font-size: 28px; }
   .intro p {
-    margin: 21px 0; }
+    margin: 15px 0 25px 0; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .intro p {
         font-size: 16px; } }
@@ -282,8 +307,8 @@ main section {
   padding: 60px 20px 40px; }
   .numbers h2 {
     color: #8d9ba3;
-    font-size: 32px;
-    margin-bottom: 38px; }
+    font-size: 24px;
+    margin-bottom: 33px; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .numbers h2 {
         font-size: 26px; } }
@@ -297,8 +322,8 @@ main section {
 .number {
   display: inline-block;
   width: 300px;
-  height: 95px;
-  line-height: 95px;
+  height: 92px;
+  line-height: 92px;
   vertical-align: middle;
   border-right: 1px solid #b8d1e0; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
@@ -314,18 +339,18 @@ main section {
   .number span {
     display: block;
     height: 40px;
-    line-height: 40px; }
+    line-height: 28px; }
   .number span:first-of-type {
     color: #3b9dbe;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 24px;
     margin-top: 10px; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .number span:first-of-type {
         font-size: 28px; } }
   .number span:last-of-type {
     color: #666666;
-    font-size: 18px;
+    font-size: 14px;
     text-transform: uppercase; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .number span:last-of-type {
@@ -340,22 +365,24 @@ main section {
 .map {
   background: linear-gradient(to top, #e0f4ff, #c4eaff);
   border-top: 5px solid #b9def4;
-  text-align: center;
   width: calc(100% - 40px);
-  padding-top: 50px; }
+  padding-top: 40px; }
   .map h2 {
-    margin: 0 0 40px 0; }
+    margin: 0 0 30px 0;
+    font-size: 28px; }
   .map img {
-    margin-bottom: 90px; }
+    display: block;
+    margin: 0 auto 85px auto; }
     @media screen and (min-width: 320px) and (max-width: 1280px) {
       .map img {
         width: 100%;
         height: auto; } }
   .map .explication {
     display: inline-block;
-    width: 320px;
-    margin: 0 10px;
-    padding: 0 40px;
+    float: left;
+    margin: 0 50px 0 60px;
+    padding: 0 0 30px 0;
+    width: 300px;
     vertical-align: top;
     text-align: left; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
@@ -380,11 +407,11 @@ main section {
       vertical-align: top; }
     .map .explication li {
       list-style: none;
-      margin-bottom: 15px; }
+      margin-bottom: 6px; }
     .map .explication h3 {
-      font-family: "LatoBold";
+      font-family: "LatoLight";
       margin-bottom: 30px;
-      font-size: 27px;
+      font-size: 20px;
       text-transform: uppercase; }
       @media screen and (min-width: 960px) and (max-width: 1280px) {
         .map .explication h3 {
@@ -392,6 +419,8 @@ main section {
       @media screen and (min-width: 768px) and (max-width: 960px) {
         .map .explication h3 {
           font-size: 20px; } }
+  .map .explication:last-of-type {
+    margin-right: 0; }
 
 .usa, .ca, .me, .gb, .fr, .ge, .sp, .it, .in, .cn, .jp {
   height: 22px;
@@ -434,15 +463,21 @@ main section {
   background-position: -130px 0; }
 
 .vacancies {
-  width: calc(100% - 40px); }
+  width: calc(100% - 40px);
+  padding: 50px 10px 0 10px;
+  margin: 0 auto; }
+  .vacancies h1 {
+    margin: 0 0 0 5px; }
+  .vacancies .underscore {
+    margin: 0 0 60px 8px; }
   @media screen and (min-width: 320px) and (max-width: 768px) {
     .vacancies {
-      padding: 0 10px;
+      padding: 50px 10px 0 10px;
       width: calc(100% - 20px);
       position: relative; } }
 
 .vacancy-intro {
-  margin-bottom: 40px; }
+  margin-bottom: 60px; }
 
 .hrmanager, .quote {
   display: inline-block;
@@ -451,7 +486,7 @@ main section {
 .hrmanager {
   text-align: center;
   width: 140px;
-  margin: 0 80px;
+  margin: 0 38px 0 80px;
   vertical-align: top; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .hrmanager {
@@ -471,14 +506,20 @@ main section {
       top: 400px;
       left: 50%;
       margin: 0 0 0 -80px; } }
+  .hrmanager p {
+    margin-top: 7px;
+    font-size: 20px; }
+  .hrmanager p:last-of-type {
+    font-size: 14px;
+    margin-top: 0px; }
 
 .quote {
   position: relative;
   background: url(../img/quote.png) top center no-repeat;
   background-size: contain;
-  width: 698px;
-  height: 156px;
-  padding: 40px 50px 50px 150px; }
+  width: 748px;
+  height: 166px;
+  padding: 30px 40px 50px 130px; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .quote {
       width: 650px;
@@ -520,7 +561,7 @@ main section {
 
 .hrmail, .hrphone {
   display: inline-block;
-  height: 20px; }
+  height: 24px; }
   @media screen and (min-width: 768px) and (max-width: 960px) {
     .hrmail, .hrphone {
       display: block;
@@ -532,11 +573,11 @@ main section {
   height: 20px;
   line-height: 22px;
   vertical-align: top;
-  font-size: 16px; }
+  font-size: 20px; }
 
 .hrmail a {
   color: #055a93;
-  margin-right: 100px; }
+  margin-right: 80px; }
 
 .hrphone a {
   color: #333; }
@@ -558,8 +599,9 @@ main section {
   background: url(../img/sprite.png) -15px 0px; }
 
 .accordeon {
-  width: calc(100% - 40px);
-  padding: 0 20px; }
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
   @media screen and (min-width: 320px) and (max-width: 1280px) {
     .accordeon {
       width: calc(100% + 40px);
@@ -586,10 +628,11 @@ main section {
       margin-left: -10px; } }
   .accordeon > li h2 {
     display: block;
-    width: calc(100% - 20px);
-    padding-left: 20px;
+    width: calc(100% - 40px);
+    padding-left: 40px;
     height: 50px;
     line-height: 50px;
+    font-size: 20px;
     vertical-align: middle;
     text-transform: uppercase;
     cursor: pointer;
@@ -597,9 +640,9 @@ main section {
     font-family: "LatoRegular";
     background-color: #fff;
     color: #055a93;
-    -webkit-box-shadow: 2px 2px 2px 0px #d1d1d1;
-    -moz-box-shadow: 2px 2px 2px 0px #d1d1d1;
-    box-shadow: 2px 2px 2px 0px #d1d1d1; }
+    -webkit-box-shadow: 0px 0px 2px 2px #d1d1d1;
+    -moz-box-shadow: 0px 0px 2px 2px #d1d1d1;
+    box-shadow: 0px 0px 2px 2px #d1d1d1; }
   .accordeon > li h2:hover {
     background-color: #f8f8f8; }
   .accordeon > li h2.active {
@@ -625,14 +668,15 @@ main section {
   padding: 0 20px; }
 
 .teamwrapper {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 30px; }
 
 .member {
-  width: 220px;
-  height: 280px;
+  width: 22%;
+  height: 240px;
   text-align: center;
   display: inline-block;
-  margin: 10px 20px;
+  margin: 30px 16px 20px 16px;
   vertical-align: top; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .member {
@@ -666,8 +710,8 @@ main section {
         width: 100px;
         height: auto; } }
   .member p:first-of-type {
-    margin: 12px auto 10px;
-    font-size: 16px; }
+    margin: 8px auto 3px;
+    font-size: 20px; }
     @media screen and (min-width: 768px) and (max-width: 1280px) {
       .member p:first-of-type {
         font-size: 15px; } }
@@ -684,9 +728,10 @@ main section {
   margin: 20px auto; }
 
 .people {
+  display: none;
   text-align: center;
   background: url(../img/people.jpg) top center no-repeat;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 617px; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .people {
@@ -697,10 +742,27 @@ main section {
       background-size: auto 430px;
       height: 430px; } }
 
+.full-footer-width-left, .full-footer-width-right {
+  position: absolute;
+  bottom: 0;
+  width: 2000px;
+  height: 290px;
+  z-index: 1; }
+
+.full-footer-width-left {
+  left: 0;
+  background: url(../img/footer-left.jpg) repeat-x center top; }
+
+.full-footer-width-right {
+  left: 50%;
+  background: url(../img/footer-right.jpg) repeat-x center top; }
+
 footer {
   height: 290px;
   background: url(../img/footer-bg.jpg) top center repeat-y;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  z-index: 10; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     footer {
       height: 380px;

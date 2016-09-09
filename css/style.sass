@@ -1,6 +1,8 @@
 $base-font: sans
 $base-color: #333
 $base-background-color: #fff
+$header-yellow: #ffb400
+$header-blue: #15313f
 
 $break-small: 320px
 $break-iphone: 375px
@@ -37,40 +39,65 @@ h1
 h2
     font-family: 'LatoBold'
 
-html
-    background-color: #ccc
-
 body
     font-family: $base-font
     color: $base-color
     background-color: $base-background-color
+    width: 100%
+    height: 100%
     margin: 0 auto
-    max-width: 1650px
     position: relative
+    overflow-x: hidden
     
 .wrapper
     margin: 0 auto
+    position: relative
     @media screen and (max-width: $break-desktop)
         width: 100%
     @media screen and (min-width: $break-desktop)
         width: 1280px
         
-.sticktop
+
+.full-header-width-left, .full-header-width-right
+    position: absolute
+    top: 0
+    width: 2000px
+    height: 90px
+    z-index: -1
+    
+.fixed
+    position: fixed
+    z-index: 1
+
+.full-header-width-left
+    background: url(../img/header-yellow.jpg) no-repeat center top
+    left: 0
+
+.full-header-width-right
+    background: url(../img/header-blue.jpg) no-repeat center top
+    left: 50%
+        
+.listdown
+    top: -90px
+
+.listup
     position: fixed
     top: 0
-    left: 0
-    width: 100%
     z-index: 1000
-
+    
 header
+    position: absolute
+    min-width: 1280px
+    max-width: 1650px
+    width: auto
     height: 90px
-    background: url(../img/header-bg.jpg) repeat-y top center
-    text-align: left
+    margin: 0 auto
+    z-index: 10
+    background: url(../img/header-full.jpg) no-repeat center top
     @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
         height: 80px
-        background-position: -210px 0
     @media screen and (min-width: $break-fablet) and (max-width: $break-tablet)
-        background-position: -240px 0
+        
     @media screen and (min-width: $break-small) and (max-width: $break-fablet)
         height: 100px
         background: url(../img/header-bg-vert.jpg) repeat-x top center
@@ -129,7 +156,7 @@ header
     
     ul
         display: inline-block
-        margin-left: 85px
+        margin-left: 81px
         float: left
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
             margin-left: 50px
@@ -142,16 +169,16 @@ header
         li
             display: inline-block
             cursor: pointer
-            height: 40px
-            line-height: 42px
+            height: 38px
+            line-height: 40px
             vertical-align: middle
-            padding: 0 20px
+            padding: 0 17px
             margin-right: 40px
             color: $base-background-color
             border: 1px solid $base-background-color
             border-radius: 5px
             text-transform: uppercase
-            font-size: 14px
+            font-size: 16px
             @media screen and (min-width: $break-small) and (max-width: $break-desktop)
                 border: none
                 font-size: 16px
@@ -191,8 +218,8 @@ header
             height: 20px
             line-height: 20px
             vertical-align: top
-            margin-top: 7px
-            font-size: 12px
+            margin-top: 8px
+            font-size: 14px
         
         a
             text-decoration: none
@@ -217,9 +244,10 @@ i.vk
     background: url(../img/sprite.png) 1px 5px
 
 main
+    padding-top: 100px
     
 h1
-    font-size: 42px
+    font-size: 40px
     margin: 0
     color: #c0c0c0
     text-transform: uppercase
@@ -232,7 +260,7 @@ h1
     background: url(../img/underscore.png) top center no-repeat
     width: 367px
     height: 7px
-    margin-bottom: 57px
+    margin-bottom: 50px
     @media screen and (min-width: $break-iphone) and (max-width: $break-fablet)
         width: 300px
     @media screen and (min-width: $break-small) and (max-width: $break-iphone)
@@ -250,7 +278,7 @@ main section
         
     img
         float: left
-        margin: 0 130px 5px 50px
+        margin: 7px 136px 5px 50px
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
             width: 320px
             height: auto
@@ -265,10 +293,11 @@ main section
             width: 280px
             float: none
     h2
-        margin: 0 0 20px 0
+        margin: 0 0 10px 0
+        font-size: 28px
         
     p 
-        margin: 21px 0
+        margin: 15px 0 25px 0
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
             font-size: 16px
         @media screen and (min-width: $break-fablet) and (max-width: $break-tablet)
@@ -283,8 +312,8 @@ main section
     
     h2
         color: #8d9ba3
-        font-size: 32px
-        margin-bottom: 38px
+        font-size: 24px
+        margin-bottom: 33px
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
             font-size: 26px
         @media screen and (min-width: $break-fablet) and (max-width: $break-tablet)
@@ -295,8 +324,8 @@ main section
 .number
     display: inline-block
     width: 300px
-    height: 95px
-    line-height: 95px
+    height: 92px
+    line-height: 92px
     vertical-align: middle
     border-right: 1px solid #b8d1e0
     @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
@@ -311,19 +340,19 @@ main section
     span
         display: block
         height: 40px
-        line-height: 40px
+        line-height: 28px
     
     span:first-of-type
         color: #3b9dbe
         font-weight: bold
-        font-size: 34px
+        font-size: 24px
         margin-top: 10px
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
             font-size: 28px
     
     span:last-of-type
         color: #666666
-        font-size: 18px
+        font-size: 14px
         text-transform: uppercase
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
             font-size: 16px
@@ -337,24 +366,26 @@ main section
 .map
     background: linear-gradient(to top, #e0f4ff, #c4eaff)
     border-top: 5px solid #b9def4
-    text-align: center
     width: calc(100% - 40px)
-    padding-top: 50px
+    padding-top: 40px
     
     h2
-        margin: 0 0 40px 0
+        margin: 0 0 30px 0
+        font-size: 28px
         
     img
-        margin-bottom: 90px
+        display: block
+        margin: 0 auto 85px auto
         @media screen and (min-width: $break-small) and (max-width: $break-desktop)
             width: 100%
             height: auto
         
     .explication
         display: inline-block
-        width: 320px
-        margin: 0 10px
-        padding: 0 40px
+        float: left
+        margin: 0 50px 0 60px
+        padding: 0 0 30px 0
+        width: 300px
         vertical-align: top
         text-align: left
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
@@ -378,17 +409,20 @@ main section
         
         li
             list-style: none
-            margin-bottom: 15px
+            margin-bottom: 6px
             
         h3
-            font-family: 'LatoBold'
+            font-family: 'LatoLight'
             margin-bottom: 30px
-            font-size: 27px
+            font-size: 20px
             text-transform: uppercase
             @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
                 font-size: 22px
             @media screen and (min-width: $break-fablet) and (max-width: $break-tablet)
                 font-size: 20px
+                
+    .explication:last-of-type
+        margin-right: 0
             
 .usa, .ca, .me, .gb, .fr, .ge, .sp, .it, .in, .cn, .jp
     height: 22px
@@ -432,13 +466,22 @@ main section
 
 .vacancies
     width: calc(100% - 40px)
+    padding: 50px 10px 0 10px
+    margin: 0 auto
+        
+    h1
+        margin: 0 0 0 5px
+    
+    .underscore
+        margin: 0 0 60px 8px
+    
     @media screen and (min-width: $break-small) and (max-width: $break-fablet)
-        padding: 0 10px
+        padding: 50px 10px 0 10px
         width: calc(100% - 20px)
         position: relative
     
 .vacancy-intro
-    margin-bottom: 40px
+    margin-bottom: 60px
     
 .hrmanager,  .quote
     display: inline-block
@@ -447,7 +490,7 @@ main section
 .hrmanager
     text-align: center
     width: 140px
-    margin: 0 80px
+    margin: 0 38px 0 80px
     vertical-align: top
     @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
         margin: 0 20px
@@ -463,14 +506,22 @@ main section
         top: 400px
         left: 50%
         margin: 0 0 0 -80px
+    
+    p
+        margin-top: 7px
+        font-size: 20px
+    
+    p:last-of-type
+        font-size: 14px
+        margin-top: 0px
         
 .quote
     position: relative
     background: url(../img/quote.png) top center no-repeat
     background-size: contain
-    width: 698px
-    height: 156px
-    padding: 40px 50px 50px 150px
+    width: 748px
+    height: 166px
+    padding: 30px 40px 50px 130px
     @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
         width: 650px
         height: 200px
@@ -508,7 +559,7 @@ main section
 
 .hrmail, .hrphone
     display: inline-block
-    height: 20px
+    height: 24px
     @media screen and (min-width: $break-fablet) and (max-width: $break-tablet)
         display: block
         margin: 20px 0 0 0
@@ -519,11 +570,11 @@ main section
     height: 20px
     line-height: 22px
     vertical-align: top
-    font-size: 16px
+    font-size: 20px
     
 .hrmail a
     color: #055a93
-    margin-right: 100px
+    margin-right: 80px
     
 .hrphone a
     color: $base-color
@@ -545,8 +596,9 @@ main section
     background: url(../img/sprite.png) -15px 0px
     
 .accordeon
-    width: calc(100% - 40px)
-    padding: 0 20px
+    display: block
+    width: 100%
+    margin: 0 auto
     @media screen and (min-width: $break-small) and (max-width: $break-desktop)
         width: calc(100% + 40px)
         margin-left: -20px
@@ -570,10 +622,11 @@ main section
     
     h2
         display: block
-        width: calc(100% - 20px)
-        padding-left: 20px
+        width: calc(100% - 40px)
+        padding-left: 40px
         height: 50px
         line-height: 50px
+        font-size: 20px
         vertical-align: middle
         text-transform: uppercase
         cursor: pointer
@@ -581,9 +634,9 @@ main section
         font-family: 'LatoRegular'
         background-color: $base-background-color
         color: #055a93
-        -webkit-box-shadow: 2px 2px 2px 0px rgba(209,209,209,1)
-        -moz-box-shadow: 2px 2px 2px 0px rgba(209,209,209,1)
-        box-shadow: 2px 2px 2px 0px rgba(209,209,209,1)
+        -webkit-box-shadow: 0px 0px 2px 2px rgba(209,209,209,1)
+        -moz-box-shadow: 0px 0px 2px 2px rgba(209,209,209,1)
+        box-shadow: 0px 0px 2px 2px rgba(209,209,209,1)
         
     h2:hover
         background-color: #f8f8f8
@@ -616,13 +669,14 @@ main section
     
 .teamwrapper
     text-align: center
+    margin-bottom: 30px
     
 .member
-    width: 220px
-    height: 280px
+    width: 22%
+    height: 240px
     text-align: center
     display: inline-block
-    margin: 10px 20px
+    margin: 30px 16px 20px 16px
     vertical-align: top
     @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
         width: 160px
@@ -657,8 +711,8 @@ main section
             height: auto
     
     p:first-of-type
-        margin: 12px auto 10px
-        font-size: 16px
+        margin: 8px auto 3px
+        font-size: 20px
         @media screen and (min-width: $break-fablet) and (max-width: $break-desktop)
             font-size: 15px
     
@@ -674,9 +728,10 @@ main section
     margin: 20px auto
     
 .people
+    display: none /* needed for now */
     text-align: center
     background: url(../img/people.jpg) top center no-repeat
-    width: 100%
+    width: calc(100% - 40px)
     height: 617px
     @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
         background-size: contain
@@ -685,11 +740,27 @@ main section
         background-size: (auto 430px)
         height: 430px
     
+.full-footer-width-left, .full-footer-width-right
+    position: absolute
+    bottom: 0
+    width: 2000px
+    height: 290px
+    z-index: 1
+    
+.full-footer-width-left
+    left: 0
+    background: url(../img/footer-left.jpg) repeat-x center top
+    
+.full-footer-width-right
+    left: 50%
+    background: url(../img/footer-right.jpg) repeat-x center top
     
 footer
     height: 290px
     background: url(../img/footer-bg.jpg) top center repeat-y
     text-align: center
+    position: relative
+    z-index: 10
     @media screen and (min-width: $break-tablet) and (max-width: $break-desktop)
         height: 380px
         background-position: -220px 0
