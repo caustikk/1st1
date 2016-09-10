@@ -34,8 +34,8 @@ body {
   overflow-x: hidden; }
 
 .wrapper {
-  margin: 0 auto;
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
   @media screen and (max-width: 1280px) {
     .wrapper {
       width: 100%; } }
@@ -49,6 +49,9 @@ body {
   width: 2000px;
   height: 90px;
   z-index: -1; }
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
+    .full-header-width-left, .full-header-width-right {
+      display: none; } }
 
 .fixed {
   position: fixed;
@@ -81,9 +84,22 @@ header {
   background: url(../img/header-full.jpg) no-repeat center top; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     header {
-      height: 80px; } }
+      min-width: 0;
+      max-width: 100%;
+      width: 100%;
+      position: relative;
+      height: 80px;
+      background-position: -210px 0; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    header {
+      min-width: 0;
+      max-width: 100%;
+      width: 100%; } }
   @media screen and (min-width: 320px) and (max-width: 768px) {
     header {
+      min-width: 0;
+      max-width: 100%;
+      width: 100%;
       height: 100px;
       background: url(../img/header-bg-vert.jpg) repeat-x top center;
       background-position: 0 -435px; } }
@@ -134,11 +150,12 @@ header {
   width: 990px; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .topnav {
-      width: 670px; } }
+      width: 670px;
+      margin-left: 10px; } }
   @media screen and (min-width: 768px) and (max-width: 960px) {
     .topnav {
-      width: 500px;
-      margin-left: 20px; } }
+      width: 600px;
+      margin-left: 60px; } }
   @media screen and (min-width: 320px) and (max-width: 768px) {
     .topnav {
       display: block;
@@ -150,10 +167,10 @@ header {
     float: left; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .topnav ul {
-        margin-left: 50px; } }
+        margin-left: 55px; } }
     @media screen and (min-width: 768px) and (max-width: 960px) {
       .topnav ul {
-        margin-left: 10px; } }
+        margin-left: 60px; } }
     @media screen and (min-width: 320px) and (max-width: 768px) {
       .topnav ul {
         margin: 0;
@@ -175,7 +192,14 @@ header {
         .topnav ul li {
           border: none;
           font-size: 16px; } }
-      @media screen and (min-width: 375px) and (max-width: 960px) {
+      @media screen and (min-width: 960px) and (max-width: 1280px) {
+        .topnav ul li {
+          margin-right: 35px; } }
+      @media screen and (min-width: 768px) and (max-width: 960px) {
+        .topnav ul li {
+          font-size: 16px;
+          margin-right: 30px; } }
+      @media screen and (min-width: 375px) and (max-width: 768px) {
         .topnav ul li {
           margin-right: 10px;
           font-size: 18px;
@@ -235,6 +259,9 @@ i.vk {
 
 main {
   padding-top: 100px; }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    main {
+      padding-top: 10px; } }
 
 h1 {
   font-size: 40px;
@@ -251,6 +278,9 @@ h1 {
   width: 367px;
   height: 7px;
   margin-bottom: 50px; }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .underscore {
+      margin-bottom: 30px; } }
   @media screen and (min-width: 375px) and (max-width: 768px) {
     .underscore {
       width: 300px; } }
@@ -265,6 +295,11 @@ main section {
 .intro {
   margin-bottom: 120px;
   width: calc(100% - 40px); }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .intro {
+      padding: 30px 20 0 20px;
+      width: calc(100% - 40px);
+      margin: 0 auto; } }
   @media screen and (min-width: 320px) and (max-width: 1280px) {
     .intro {
       margin-bottom: 0; } }
@@ -275,29 +310,44 @@ main section {
       .intro img {
         width: 320px;
         height: auto;
-        margin-right: 40px; } }
-    @media screen and (min-width: 320px) and (max-width: 960px) {
+        margin: 5px 75px 5px 20px; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
       .intro img {
-        width: 480px;
+        width: 320px;
         height: auto;
         display: block;
-        clear: both;
-        margin: 0 auto; } }
+        margin: 3px 75px 0 20px; } }
     @media screen and (min-width: 320px) and (max-width: 768px) {
       .intro img {
         width: 280px;
         float: none; } }
   .intro h2 {
     margin: 0 0 10px 0;
-    font-size: 28px; }
+    font-size: 30px; }
+    @media screen and (min-width: 960px) and (max-width: 1280px) {
+      .intro h2 {
+        margin: 0;
+        font-size: 30px; } }
   .intro p {
     margin: 15px 0 25px 0; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .intro p {
-        font-size: 16px; } }
+        font-size: 20px;
+        margin: 0 0 60px 0;
+        padding: 0 0 0 20px;
+        line-height: 28px; } }
     @media screen and (min-width: 768px) and (max-width: 960px) {
       .intro p {
-        font-size: 18px; } }
+        font-size: 20px;
+        margin: 0 0 50px 0;
+        padding: 0 0 0 20px;
+        line-height: 28px; } }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .intro p:last-of-type {
+      margin-bottom: 20px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .intro p:last-of-type {
+      margin: -25px 0 40px 0; } }
 
 .numbers {
   background-color: #ecf8ff;
@@ -305,16 +355,20 @@ main section {
   text-align: center;
   width: calc(100% - 40px);
   padding: 60px 20px 40px; }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .numbers {
+      padding: 30px 20px 10px 20px; } }
   .numbers h2 {
     color: #8d9ba3;
     font-size: 24px;
     margin-bottom: 33px; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .numbers h2 {
-        font-size: 26px; } }
+        font-size: 24px; } }
     @media screen and (min-width: 768px) and (max-width: 960px) {
       .numbers h2 {
-        font-size: 24px; } }
+        font-size: 23px;
+        margin-bottom: 28px; } }
     @media screen and (min-width: 320px) and (max-width: 768px) {
       .numbers h2 {
         font-size: 18px; } }
@@ -328,10 +382,12 @@ main section {
   border-right: 1px solid #b8d1e0; }
   @media screen and (min-width: 960px) and (max-width: 1280px) {
     .number {
-      width: 220px; } }
+      width: 240px;
+      margin-top: 5px; } }
   @media screen and (min-width: 768px) and (max-width: 960px) {
     .number {
-      width: 170px; } }
+      width: 220px;
+      margin-bottom: 10px; } }
   @media screen and (min-width: 375px) and (max-width: 768px) {
     .number {
       border-right: none;
@@ -347,14 +403,20 @@ main section {
     margin-top: 10px; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .number span:first-of-type {
-        font-size: 28px; } }
+        font-size: 26px;
+        margin-top: 16px; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .number span:first-of-type {
+        font-size: 26px;
+        margin-top: 16px; } }
   .number span:last-of-type {
     color: #666666;
     font-size: 14px;
     text-transform: uppercase; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .number span:last-of-type {
-        font-size: 16px; } }
+        font-size: 12px;
+        margin-top: -5px; } }
 
 .number:last-of-type {
   border-right: none; }
@@ -367,9 +429,24 @@ main section {
   border-top: 5px solid #b9def4;
   width: calc(100% - 40px);
   padding-top: 40px; }
+  @media screen and (min-width: 960px) and (max-width: 1280px) {
+    .map {
+      padding-top: 35px; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .map {
+      padding-top: 30px; } }
   .map h2 {
     margin: 0 0 30px 0;
     font-size: 28px; }
+    @media screen and (min-width: 960px) and (max-width: 1280px) {
+      .map h2 {
+        margin: 0 0 32px 0;
+        font-size: 29px;
+        text-align: center; } }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .map h2 {
+        font-size: 30px;
+        margin: 0 0 25px 0; } }
   .map img {
     display: block;
     margin: 0 auto 85px auto; }
@@ -377,6 +454,10 @@ main section {
       .map img {
         width: 100%;
         height: auto; } }
+    @media screen and (min-width: 960px) and (max-width: 1280px) {
+      .map img {
+        width: 80%;
+        margin-bottom: 30px; } }
   .map .explication {
     display: inline-block;
     float: left;
@@ -387,13 +468,14 @@ main section {
     text-align: left; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .map .explication {
-        width: 250px;
-        padding: 0 0 0 30px; } }
+        width: 240px;
+        padding: 0 0 0 10px;
+        margin: 10px 15px 30px 40px; } }
     @media screen and (min-width: 768px) and (max-width: 960px) {
       .map .explication {
         width: 210px;
         padding: 0 0 0 20px;
-        margin: 0; } }
+        margin: 50px 20px 30px 40px; } }
     @media screen and (min-width: 375px) and (max-width: 768px) {
       .map .explication {
         padding: 0; } }
@@ -466,10 +548,20 @@ main section {
   width: calc(100% - 40px);
   padding: 50px 10px 0 10px;
   margin: 0 auto; }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .vacancies {
+      width: calc(100% - 20px);
+      padding: 50px 10px 40px 10px; } }
   .vacancies h1 {
     margin: 0 0 0 5px; }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .vacancies h1 {
+        margin: -2px 0 0 6px; } }
   .vacancies .underscore {
     margin: 0 0 60px 8px; }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .vacancies .underscore {
+        margin: -3px 0 45px 6px; } }
   @media screen and (min-width: 320px) and (max-width: 768px) {
     .vacancies {
       padding: 50px 10px 0 10px;
@@ -493,7 +585,11 @@ main section {
       margin: 0 20px; } }
   @media screen and (min-width: 768px) and (max-width: 960px) {
     .hrmanager {
-      margin: 0; } }
+      margin: 0 20px 0 35px;
+      width: 11%; }
+      .hrmanager img {
+        width: 100%;
+        height: auto; } }
   @media screen and (min-width: 375px) and (max-width: 768px) {
     .hrmanager {
       position: absolute;
@@ -509,6 +605,9 @@ main section {
   .hrmanager p {
     margin-top: 7px;
     font-size: 20px; }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .hrmanager p {
+        margin-top: 15px; } }
   .hrmanager p:last-of-type {
     font-size: 14px;
     margin-top: 0px; }
@@ -527,10 +626,10 @@ main section {
       padding: 10px 20px 20px 50px; } }
   @media screen and (min-width: 768px) and (max-width: 960px) {
     .quote {
-      width: 510px;
-      height: 290px;
-      padding: 10px 20px 20px 50px;
-      background-size: 550px 320px; } }
+      width: calc(79% - 100px);
+      height: 250px;
+      padding: 20px 10px 20px 90px;
+      background-size: 100% 270px; } }
   @media screen and (min-width: 320px) and (max-width: 768px) {
     .quote {
       background: url(../img/quote-vert.jpg) top center no-repeat;
@@ -553,7 +652,7 @@ main section {
     @media screen and (min-width: 768px) and (max-width: 960px) {
       .quote p {
         font-size: 20px;
-        margin-bottom: 20px; } }
+        margin-bottom: 18px; } }
     @media screen and (min-width: 320px) and (max-width: 375px) {
       .quote p {
         font-size: 16px;
@@ -564,8 +663,11 @@ main section {
   height: 24px; }
   @media screen and (min-width: 768px) and (max-width: 960px) {
     .hrmail, .hrphone {
-      display: block;
       margin: 20px 0 0 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .hrmail {
+    margin: 20px -15px 0 0; } }
 
 .hrmail a, .hrphone a {
   text-decoration: none;
@@ -586,7 +688,7 @@ main section {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   background: url(../img/sprite.png) -37px 2px;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -607,10 +709,14 @@ main section {
       width: calc(100% + 40px);
       margin-left: -20px;
       padding: 0; } }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .accordeon {
+      width: calc(100% + 30px);
+      margin-top: -20px; } }
   @media screen and (min-width: 375px) and (max-width: 768px) {
     .accordeon {
       width: 100%;
-      margin: 600px 0 0 0;
+      margin: 550px 0 0 0;
       padding: 0; } }
   @media screen and (min-width: 320px) and (max-width: 375px) {
     .accordeon {
@@ -625,7 +731,7 @@ main section {
   @media screen and (min-width: 320px) and (max-width: 768px) {
     .accordeon > li {
       width: calc(100% + 20px);
-      margin-left: -10px; } }
+      margin-left: 0 0 15px -10px; } }
   .accordeon > li h2 {
     display: block;
     width: calc(100% - 40px);
@@ -643,6 +749,17 @@ main section {
     -webkit-box-shadow: 0px 0px 2px 2px #d1d1d1;
     -moz-box-shadow: 0px 0px 2px 2px #d1d1d1;
     box-shadow: 0px 0px 2px 2px #d1d1d1; }
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      .accordeon > li h2 {
+        width: calc(100% - 50px);
+        padding-left: 50px;
+        height: 70px;
+        line-height: 76px;
+        font-size: 24px;
+        border-top: 1px solid #ddd;
+        -webkit-box-shadow: 0px 2px 2px 2px #e5e5e5;
+        -moz-box-shadow: 0px 2px 2px 2px #e5e5e5;
+        box-shadow: 0px 2px 2px 2px #e5e5e5; } }
   .accordeon > li h2:hover {
     background-color: #f8f8f8; }
   .accordeon > li h2.active {
@@ -662,10 +779,16 @@ main section {
 
 .ourteam, .teamwrapper {
   margin-top: 50px; }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .ourteam, .teamwrapper {
+      margin: 0 auto; } }
 
 .ourteam {
   width: calc(100% - 40px);
   padding: 0 20px; }
+  @media screen and (min-width: 768px) and (max-width: 960px) {
+    .ourteam .underscore {
+      margin-bottom: 40px; } }
 
 .teamwrapper {
   text-align: center;
@@ -687,11 +810,11 @@ main section {
         height: auto; } }
   @media screen and (min-width: 768px) and (max-width: 960px) {
     .member {
-      width: 142px;
-      height: 240px;
-      margin: 10px; }
+      width: 22%;
+      height: 230px;
+      margin: 15px 8px 0 8px; }
       .member img {
-        width: 140px;
+        width: 72%;
         height: auto; } }
   @media screen and (min-width: 375px) and (max-width: 768px) {
     .member {
@@ -714,18 +837,25 @@ main section {
     font-size: 20px; }
     @media screen and (min-width: 768px) and (max-width: 1280px) {
       .member p:first-of-type {
-        font-size: 15px; } }
+        font-size: 20px;
+        margin: 7px auto 0; } }
   .member p:last-of-type {
     font-size: 14px;
     color: #666; }
     @media screen and (min-width: 960px) and (max-width: 1280px) {
       .member p:last-of-type {
         font-size: 13px; } }
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      .member p:last-of-type {
+        font-size: 14px; } }
 
 .member:first-of-type {
   display: block;
   clear: both;
   margin: 20px auto; }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .member:first-of-type {
+      margin: 20px auto 0; } }
 
 .people {
   display: none;
@@ -748,6 +878,9 @@ main section {
   width: 2000px;
   height: 290px;
   z-index: 1; }
+  @media screen and (min-width: 320px) and (max-width: 1280px) {
+    .full-footer-width-left, .full-footer-width-right {
+      display: none; } }
 
 .full-footer-width-left {
   left: 0;
@@ -829,13 +962,12 @@ footer {
 .footfourth:first-of-type {
   padding-left: 10px;
   width: 290px; }
-  @media screen and (min-width: 960px) and (max-width: 1280px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
     .footfourth:first-of-type {
-      float: left; } }
-  @media screen and (min-width: 768px) and (max-width: 960px) {
-    .footfourth:first-of-type {
-      width: 100%;
-      clear: both; } }
+      width: calc(100% - 10px);
+      clear: both;
+      margin: 0 auto;
+      padding: 20px 0 0 10px; } }
   .footfourth:first-of-type img {
     display: block;
     margin-bottom: 25px;
