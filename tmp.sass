@@ -1,0 +1,55 @@
+.footfourth:first-of-type
+    padding-left: 10px
+    width: 25%
+    min-height: 100%
+    background: url(../img/footer-logo-bg.jpg) repeat-y right top
+    @media screen and (min-width: $break-fablet) and (max-width: $break-desktop - 1)
+        width: 100%
+        clear: both
+        margin: 0 auto
+        padding: 20px 0 0 10px
+    
+    img
+        display: block
+        margin-bottom: 25px
+        height: 40px
+        @media screen and (min-width: $break-tablet) and (max-width: $break-desktop - 1)
+            width: 158px
+        @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
+            float: left
+            width: 160px
+            height: auto
+            margin: 0 80px 40px 30px
+        @media screen and (min-width: $break-small) and (max-width: $break-fablet - 1)
+            display: none
+        
+    
+    p:first-of-type, p:last-of-type
+        color: $base-background-color
+        font-size: 14px
+        margin-bottom: 8px
+    @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
+        margin-bottom: 5px
+    
+    p:nth-child(3), p:last-of-type
+        color: #6490a9
+    
+    p:nth-child(3)
+        font-size: 11px
+        margin-bottom: 2px
+    @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
+        white-space: nowrap
+    
+    p:last-of-type
+        margin-bottom: 0
+    
+.footfourth:last-of-type 
+    li
+        margin-bottom: 6px
+        color: #6597b0
+        cursor: pointer
+        @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
+            margin-bottom: 5px
+        @media screen and (min-width: $break-small) and (max-width: $break-fablet - 1)
+            margin-left: 10px
+            margin-bottom: 15px

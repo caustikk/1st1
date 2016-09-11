@@ -12,7 +12,7 @@ $(document).ready(function() {
     // scroll trace
     var tempScrollTop, currentScrollTop = 0;
     $(document).scroll(function(){
-        if (1280 <= $('html').width()) {
+        if (1280 < $('html').width()) {
             currentScrollTop = $(document).scrollTop();
             if (tempScrollTop < currentScrollTop){
                 $('header').animate({height:'hide'}, 500).removeClass('listup');
