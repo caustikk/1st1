@@ -30,4 +30,10 @@ $(document).ready(function() {
             
         }
     });
+    $('.vacancycontent').append('<div class="vacancy_at_bottom"><p>Отправляйте своё резюме на электронную почту или свяжитесь с нами по телефону.<div class="hrmail"><i class="envelope"></i><a href="mailto:work@compalg.ru">work@compalg.ru</a></div><div class="hrphone"><i class="iphone"></i><a href="tel:89634328925">8-963-432-8925</a></div></p></div>');
+    $('.accordeon').each(function(){
+        if( $.trim($(this).text()) == "" ){
+            $('.accordeon').toggleClass('hidden');
+        }
+    });
 });

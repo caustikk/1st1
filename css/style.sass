@@ -774,7 +774,19 @@ main section
         margin-top: 0px
         @media screen and (min-width: $break-small) and (max-width: $break-iphone - 1)
             font-size: 13px
-        
+
+.quotepic
+    background: url(../img/quote.jpg) top center no-repeat
+    width: 27px
+    height: 30px
+    position: absolute
+    top: 30px
+    left: 80px
+    @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
+        left: 50px
+    @media screen and (min-width: $break-small) and (max-width: $break-fablet - 1)
+        display: none
+
 .quote
     position: relative
     background: url(../img/quote.png) top center no-repeat
@@ -840,7 +852,7 @@ main section
     @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
         margin: 25px -15px 0 0
     @media screen and (min-width: $break-iphone) and (max-width: $break-fablet - 1)
-        margin: 10px -15px 10px 0
+        margin: 10px 0 10px 0
     
 .hrmail a, .hrphone a
     text-decoration: none
@@ -904,6 +916,7 @@ main section
     
     h2
         display: block
+        position: relative
         width: 100%
         padding-left: 40px
         height: 50px
@@ -943,7 +956,16 @@ main section
             line-height: 47px
             padding-left: 10px
             font-size: 18px
-        
+    
+    h2:after
+        content: '\25BC'
+        display: block
+        position: absolute
+        right: 20px
+        top: 50%
+        margin-top: -2.5em
+        font-size: 12px
+            
     h2:hover
         background-color: #f8f8f8
         
@@ -951,10 +973,20 @@ main section
         background-color: #055a93
         color: $base-background-color
         
+    h2.active:after
+        content: '\25B2'
+        display: block
+        position: absolute
+        right: 20px
+        top: 50%
+        margin-top: -2.5em
+        font-size: 12px
+        
     .vacancycontent
         display: none
         width: 100%
         padding: 20px 40px
+        border: 1px solid #ddd
         
         .active
             display: block
@@ -965,6 +997,36 @@ main section
         
     .vacancycontent p
         font-weight: bold
+        
+    .vacancy_at_bottom
+        min-width: 100%
+        width: auto
+        height: 111px
+        margin: 0 -40px -20px -40px
+        padding: 30px 0 30px 80px
+        background: url(../img/vacancy-con-arr.jpg) no-repeat top left #ebf8ff
+        p
+            font-weight: normal
+            margin-bottom: 20px
+            
+        .hrmail, .hrphone
+            display: inline-block
+        @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
+            min-width: 99%
+            width: auto
+            margin: 0 -40px -20px -40px
+            
+            .hrmail, .hrphone
+                display: inline-block
+                margin-top: -40px
+        @media screen and (min-width: $break-small) and (max-width: $break-fablet - 1)
+            padding-top: 10px
+            .hrmail, .hrphone
+                display: block
+                margin: 3px 0
+            p, .hrmail a, .hrphone a
+                font-size: 12px
+                margin: 0px
         
 .ourteam, .teamwrapper
     margin-top: 50px
@@ -982,8 +1044,11 @@ main section
     @media screen and (min-width: $break-fablet) and (max-width: $break-tablet - 1)
         padding: 40px 0 0 0
         
+        h1
+            margin-left: 16px
+        
         .underscore
-            margin-bottom: 40px
+            margin: 0 0 40px 16px
     @media screen and (min-width: $break-iphone) and (max-width: $break-fablet - 1)
         padding: 0
         
@@ -1271,11 +1336,14 @@ footer
         padding-top: 15px
         padding-left: 40px
     @media screen and (min-width: $break-iphone) and (max-width: $break-fablet - 1)
-        padding-left: 10px
-    @media screen and (min-width: $break-small) and (max-width: $break-fablet - 1)
+        padding: 45px 10px 0 10px
+        h3
+            font-size: 20px
+    @media screen and (min-width: $break-small) and (max-width: $break-iphone - 1)
         padding: 20px 9px 0 9px
         h3
             font-size: 16px
+        
         
 .resume
     position: relative
@@ -1349,6 +1417,7 @@ footer
         position: absolute
         left: 190px
         top: 80px
+        cursor: pointer
         @media screen and (min-width: $break-tablet) and (max-width: $break-desktop - 1)
             width: 124px
             height: 40px
@@ -1359,6 +1428,9 @@ footer
             height: 44px
             left: 220px
             top: 110px
+        @media screen and (min-width: $break-iphone) and (max-width: $break-fablet - 1)
+            top: 130px
+            left: 260px
         
     label
         font-size: 14px
